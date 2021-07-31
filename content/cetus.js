@@ -343,10 +343,10 @@ class Cetus {
 
                 break;
             case "utf-8":
-                const tempBuf = new Uint16Array(searchParams.length);
+                const tempBuf = new Uint16Array(searchParam.length);
 
                 for (let i = 0; i < searchParam.length; i++) {
-                    realParam[i] = searchParam.charCodeAt(i);
+                    tempBuf[i] = searchParam.charCodeAt(i);
                 }
 
                 realParam = new Uint8Array(tempBuf.buffer);

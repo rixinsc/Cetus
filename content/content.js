@@ -19,7 +19,7 @@ window.addEventListener("cetusMsgIn", function(msg) {
     chrome.runtime.sendMessage(msg.detail);
 }, false);
 
-// Listn for messages from extension and pass them along to web page
+// Listen for messages from extension and pass them along to web page
 chrome.runtime.onMessage.addListener(function(msg) {
     const evt = new CustomEvent("cetusMsgOut", { detail: JSON.stringify(msg) } );
 
